@@ -132,6 +132,13 @@
 
 				   			// Print high street size and shape ie. 'You are a size 6 FIT'
 				    		answer.val('You are a size ' + selectedHighstreetSize + ' ' + shape);
+
+				    		// Add shape class to answer input
+				    		answer.removeClass().addClass(shape);
+
+				    		// Add close button
+				    		$('[data-role="close"]').remove();
+				    		$('[data-role="calculator"] fieldset').append('<button data-role="close" class="button secondary mini" href="">Continue shopping</button>');
 				        }
 				    }
 				}
